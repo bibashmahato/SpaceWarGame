@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game{
+    width: 390px;
+    height: 600px;
+    background-image: url('spacebg.png');
+    overflow: hidden;
+    position: absolute;
+}
+
+.player{
+    width: 130px;
+    height: auto;
+    position: absolute;
+    top: 370px;
+    left: 0px;
+    text-align: center;
+    z-index: 1;
+}
+
+.alien{ 
+    width: 130px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+.player img{
+    width: 130px;
+    height: auto;
+}
+
+.alien img{
+    width: 100px;
+    height: auto;
+}
+
+.alienMove {
+    animation: alienMove 2s linear infinite forwards;
+}
+
+.bullet{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 370px;
+    left: 0;
+    text-align: center;
+    animation: fire 1s linear 1 forwards;
+}
+ 
+.bulletImg{
+    width: 100px;
+    height: auto;
+}
+
+#result{
+    height: 200px;
+    width: 400px;
+    background-color: cornflowerblue;
+    margin: 1rem auto;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    display:none;
+}
+#score{
+    font-size: 2.2rem;
+    color: brown;
+}
+#btn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: cyan;
+    font-size: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@keyframes fire{
+    0%{
+        top: 370px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+
+@keyframes alienMove{
+    0%{
+        top: -10px;
+    }
+    100%{
+        top: 470px;
+    }
+}
